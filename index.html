@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Board Marksheet</title>
+	<style>
+		body{
+			background-color: rgb(202, 223, 216);
+		}
+		.container {
+			margin: 0 auto;
+			max-width: 500px;
+			padding: 20px;
+			margin-bottom: 10px;
+			
+		}
+
+		.container-1 {
+			margin: 10px auto;
+			max-width: 500px;
+			padding: 20px;
+			background-color: antiquewhite;
+		}
+
+
+
+		h1 {
+			text-align: center;
+			font-weight: bold;
+		}
+
+
+		
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-bottom: 5px;
+		}
+
+		th,
+		td {
+			padding: 10px;
+			text-align: center;
+			border: 1px solid black;
+			font-weight: bold;
+			/* border-radius: 20px; */
+		}
+
+		thead {
+			background-color: rgb(206, 220, 83);
+		}
+
+		button {
+			margin-top: 10px;
+			margin-left: 1400px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		#result {
+			margin-bottom: 20px;
+			font-weight: bold;
+			margin-left: 1300px;
+		}
+
+		label {
+			display: inline-block;
+			width: 100px;
+			margin-bottom: 10px;
+			margin-left: 70px;
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+		input[type="text"] {
+			width: 200px;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-left: 25px;
+		}
+	</style>
+</head>
+<h1>SAINT ANDREWS INSTITUTE TECHNOLOGY AND MANAGEMENT</h1>
+<hr style="border: 3px solid black;">
+<body>
+	<table>
+	<div class="container-1">
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your name"><br>
+
+			<label for="father-name">Father's Name:</label>
+			<input type="text" id="father-name" name="father-name" placeholder="Enter your father-name"><br>
+
+			<label for="roll">Roll numbers:</label>
+			<input type="text" id="roll" name="roll" placeholder="Enter your roll numbers"><br>
+
+			<label for="roll-code">Roll Code:</label>
+			<input type="text" id="roll-code" name="roll-code" placeholder="Enter your roll-code"><br>
+		</form>
+	
+	</div>
+	<div class="container">
+		
+		<table>
+			<form>
+				<table>
+					<thead>
+						<tr>
+							<th>Subject</th>
+							<th>Marks Obtained</th>
+							<th>pass marks</th>
+
+							<th>Total Marks</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Maths</td>
+							<td><input type="number" id="maths" name="maths" min="0" max="100" required></td>
+							<td>30</td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td>Science</td>
+							<td><input type="number" id="science" name="science" min="0" max="100" required></td>
+							<td>30</td>
+
+							<td>100</td>
+						</tr>
+						<tr>
+							<td>English</td>
+							<td><input type="number" id="english" name="english" min="0" max="100" required></td>
+							<td>30</td>
+
+							<td>100</td>
+						</tr>
+						<tr>
+							<td>History</td>
+							<td><input type="number" id="history" name="history" min="0" max="100" required></td>
+							<td>30</td>
+
+							<td>100</td>
+						</tr>
+						<tr>
+							<td>Geography</td>
+							<td><input type="number" id="geography" name="geography" min="0" max="100" required></td>
+							<td>30</td>
+
+							<td>100</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<button type="button" onclick="calculate()">Calculate</button>
+			</form>
+
+			<div id="result"></div>
+	</div>
+
+	<script>
+		function calculate() {
+			const maths = document.getElementById("maths").value;
+			const science = document.getElementById("science").value;
+			const english = document.getElementById("english").value;
+			const history = document.getElementById("history").value;
+			const geography = document.getElementById("geography").value;
+
+			const totalMarks = parseInt(maths) + parseInt(science) + parseInt(english) + parseInt(history) + parseInt(geography);
+			const percentage = (totalMarks / 500) * 100;
+
+			let grade;
+
+			if (percentage >= 90) {
+				grade = "A+";
+			} else if (percentage >= 80) {
+				grade = "A";
+			} else if (percentage >= 70) {
+				grade = "B";
+			} else if (percentage >= 60) {
+				grade = "C";
+			} else if (percentage >= 50) {
+				grade = "D";
+			} else {
+				grade = "Fail";
+			}
+
+			const resultDiv = document.getElementById("result");
+
+			resultDiv.innerHTML = `
+		<p>Total Marks: ${totalMarks}</p>
+		<p>Percentage: ${percentage.toFixed(2)}%</p>
+		<p>Grade: ${grade}</p>
+	`
+		}
+
+	</script>
+</body>
+</html>
