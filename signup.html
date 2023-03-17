@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Signup Form with Navigation Bar</title>
+	<!-- <link rel="login" type="text/css" href="login.html"> -->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: url(https://images.pexels.com/photos/11909364/pexels-photo-11909364.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+			background-size: cover;
+			background-blend-mode: multiply;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			/* padding: 10px; */
+			font-size: 30px;
+		}
+
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			padding-top: 50px;
+		}
+
+		nav li {
+			display: inline-block;
+			margin-right: 10px;
+			padding-bottom: 30px;
+			padding-right: 40px;
+
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+
+		}
+
+		main {
+			margin: 50px auto;
+			width: 80%;
+			max-width: 600px;
+		}
+
+		form {
+			background-color: #f2f2f2;
+			border: 1px solid #ccc;
+			padding: 20px;
+		}
+
+		form h2 {
+			margin-top: 0;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		button[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="login.html">login</a></li>
+				<li><a href="marksheet.html">Marksheet</a></li>
+			</ul>
+		</nav>
+	</header>
+	<body>
+
+
+	<main>
+		<form>
+			<h2>Signup Form</h2>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+			<input type="submit" value="signup"onclick="location.href='Marksheet.html'">
+
+			<!-- <button type="submit">Signup</button> -->
+		</form>
+	</main>
+
+
+</body>
+
+
+
+</html>
