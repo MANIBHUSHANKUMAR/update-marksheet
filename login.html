@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login Form</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			
+		}
+
+		nav ul {
+			list-style: none;
+			display: flex;
+			justify-content: flex-end;
+			padding-right: 100px;
+		}
+
+		nav li {
+			margin: 0 10px;
+	
+			padding-right: 50px;
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		body {
+			/* background: url(https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?auto=compress&cs=tinysrgb&w=600);
+			background-size: cover;
+			background-blend-mode: multiply; */
+			background-color: #f1f1f1;
+			
+			font-family: Arial, sans-serif;
+			padding: 0;
+			margin: 0;
+		}
+
+		.header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.container {
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px #aaa;
+			margin: 100px auto;
+			padding: 20px;
+			width: 400px;
+			height: 300px;
+		}
+
+		input[type=text],
+		input[type=password] {
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 0px 5px #aaa;
+			padding: 10px;
+			padding-top: 30px;
+			margin-top: 10px;
+			width: 100%;
+		}
+
+		input[type=submit] {
+			background-color: #333;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			padding: 10px;
+			padding-top: 30px;
+			margin-top: 30px;
+			width: 100%;
+		}
+
+		input[type=submit]:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="signup.html">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<!-- <li><a href="signup.html">signup</a></li> -->
+				
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<form>
+			<label for="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="username" required>
+			<label for="password"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+			<input type="submit" value="Login"onclick="location.href='Marksheet.html'">
+			<!-- <input type="submit" value="Login"> -->
+		</form>
+	</div>
+	<script>
+
+	</script>
+</body>
+
+</html>
